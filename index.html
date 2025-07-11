@@ -27,17 +27,18 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 60px; /* Más espacio antes de la tabla */
+            margin-bottom: 80px; /* Más espacio antes de la tabla */
         }
         .header-content {
             position: relative; /* Contenedor para el texto y la imagen */
+            padding-top: 60px; /* Espacio para que la imagen no se solape con el texto */
         }
         .header img.logo {
-            width: 180px; /* Aumenté a 180px para que sea más grande */
+            width: 180px; /* Tamaño mantenido */
             height: 180px;
             border-radius: 50%; /* Mantiene la imagen circular */
             position: absolute;
-            top: -30px; /* Ajuste para alinear con el texto */
+            top: 20px; /* Ajuste para que no se monte sobre la tabla */
             right: 20px; /* Esquina superior derecha */
             object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
         }
@@ -169,11 +170,14 @@
             .header img.logo {
                 width: 120px; /* Tamaño reducido para móviles */
                 height: 120px;
-                top: -20px;
+                top: 10px;
                 right: 10px;
             }
             .header {
-                margin-bottom: 30px;
+                margin-bottom: 40px;
+            }
+            .header-content {
+                padding-top: 40px;
             }
             table {
                 margin-top: 30px;
