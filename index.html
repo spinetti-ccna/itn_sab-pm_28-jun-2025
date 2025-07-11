@@ -23,19 +23,19 @@
             border-radius: 16px;
             padding: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative; /* Para posicionar la imagen fuera de la tabla */
         }
         .header {
             text-align: center;
             margin-bottom: 30px;
-            position: relative; /* Para posicionar la imagen */
         }
         .header img.logo {
             width: 100px; /* Ajusta el tamaño según necesites */
             height: 100px;
             border-radius: 50%; /* Hace la imagen circular */
             position: absolute;
-            top: 10px;
-            right: 20px; /* Coloca en la esquina superior derecha */
+            top: 20px; /* Ajustado para no solaparse con la tabla */
+            right: 20px; /* Esquina superior derecha */
             object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
         }
         .header h1, .header h2, .header h3 {
@@ -60,6 +60,7 @@
             border-radius: 12px;
             overflow: hidden;
             table-layout: fixed;
+            margin-top: 20px; /* Espacio entre el header y la tabla */
         }
         th, td {
             padding: 10px;
@@ -165,7 +166,7 @@
             .header img.logo {
                 width: 80px; /* Tamaño reducido para móviles */
                 height: 80px;
-                top: 5px;
+                top: 10px;
                 right: 10px;
             }
         }
