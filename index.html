@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clases del Curso CCNAv7 (ITN) - Sábados / 1:00 p.m. - 5:00 p.m. - Instructor Gustavo Spinetti</title>
+  <title>Clases del Curso CCNAv7 (ITN)</title>
   <link rel="icon" href="https://www.netacad.com/" type="image/x-icon">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #1e3a8a, #60a5fa);
-      margin: 40px;
+      margin: 0;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,51 +28,41 @@
       position: relative;
     }
 
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
     .header-content {
-      position: relative;
-      padding-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e5e7eb;
     }
 
     .logo {
-      width: 125px;
-      height: 125px;
-      border-radius: 100%;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: absolute;
+      margin: 10px;
+      flex-shrink: 0;
     }
 
-    .logo-left {
-      top: 10px;
-      left: 10px;
+    .header-text {
+      flex: 1 1 300px;
+      padding: 10px;
     }
 
-    .logo-right {
-      top: 10px;
-      right: 10px;
-    }
-
-    .header h1, .header h2, .header h3 {
+    .header-text h1 {
       margin: 0;
+      font-size: 28px;
       color: #1e3a8a;
     }
 
-    .header h1 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-top: 0;
-    }
-
-    .header h2, .header h3 {
+    .header-text h2, .header-text h3 {
+      margin: 8px 0;
       font-size: 18px;
-      font-weight: 500;
-      margin: 10px 0;
+      color: #1e3a8a;
     }
 
     table {
@@ -80,12 +71,11 @@
       background: #f8fafc;
       border-radius: 12px;
       overflow: hidden;
-      table-layout: fixed;
       margin-top: 20px;
     }
 
     th, td {
-      padding: 10px;
+      padding: 12px;
       font-size: 14px;
       border-bottom: 1px solid #e0e0e0;
       text-align: center;
@@ -94,17 +84,8 @@
     th {
       background: #1e3a8a;
       color: #fff;
-      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-    }
-
-    td:first-child {
-      width: 65%;
-    }
-
-    td:last-child {
-      width: 35%;
     }
 
     .thumbnail-container {
@@ -125,17 +106,16 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .thumbnail-container .play-button {
+    .play-button {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(30, 58, 138, 0.7);
+      background: rgba(30, 58, 138, 0.8);
       color: #fff;
       padding: 10px 14px;
       border-radius: 5px;
       font-size: 14px;
-      text-transform: uppercase;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -174,37 +154,11 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 15px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2, h3 {
-        font-size: 16px;
-      }
-
-      th, td {
-        padding: 8px;
-        font-size: 12px;
-      }
-
-      .thumbnail-container img {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .thumbnail-container .play-button {
-        padding: 8px 12px;
-        font-size: 12px;
-      }
-
-      .qr-code img {
-        width: 130px;
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
       .logo {
@@ -212,38 +166,40 @@
         height: 90px;
       }
 
-      .logo-left {
-        top: 10px;
-        left: 10px;
+      .header-text h1 {
+        font-size: 22px;
       }
 
-      .logo-right {
-        top: 10px;
-        right: 10px;
+      .header-text h2, .header-text h3 {
+        font-size: 16px;
       }
 
-      .header-content {
-        padding-top: 50px;
+      th, td {
+        font-size: 12px;
+        padding: 8px;
       }
 
-      table {
-        margin-top: 30px;
+      .qr-code img {
+        width: 120px;
+      }
+
+      .play-button {
+        font-size: 12px;
+        padding: 8px 10px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="header-content">
-        <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo logo-left">
-        <div class="header-text">
-          <h1>Clases del Curso de CCNAv7 (ITN)</h1>
-          <h2>Horario: Sábados / 1:00 p.m. - 5:00 p.m.</h2>
-          <h3>Instructor Gustavo Spinetti</h3>
-        </div>
-        <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo logo-right">
+    <div class="header-content">
+      <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo">
+      <div class="header-text">
+        <h1>Clases del Curso de CCNAv7 (ITN)</h1>
+        <h2>Horario: Sábados / 1:00 p.m. - 5:00 p.m.</h2>
+        <h3>Instructor Gustavo Spinetti</h3>
       </div>
+      <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo">
     </div>
 
     <table>
@@ -276,8 +232,9 @@
     </table>
 
     <footer>
-      <p>Curso CCNAv7 impartido por el Instructor Gustavo Spinetti | Contacto: 
-        <a href="mailto:gustavoaspinettim@yahoo.es">gustavoaspinettim@yahoo.es</a></p>
+      <p>Curso CCNAv7 impartido por el Instructor Gustavo Spinetti | Contacto:
+        <a href="mailto:gustavoaspinettim@yahoo.es">gustavoaspinettim@yahoo.es</a>
+      </p>
     </footer>
   </div>
 </body>
