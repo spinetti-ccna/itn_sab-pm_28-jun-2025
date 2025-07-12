@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Clases del Curso CCNAv7 (ITN)</title>
-  <link rel="icon" href="https://www.netacad.com/" type="image/x-icon">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -25,14 +24,13 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      position: relative;
     }
 
     .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       text-align: center;
       padding-bottom: 20px;
       border-bottom: 2px solid #e5e7eb;
@@ -49,7 +47,7 @@
     }
 
     .header-text {
-      flex: 1 1 300px;
+      flex: 1;
       padding: 10px;
     }
 
@@ -154,16 +152,29 @@
       text-decoration: underline;
     }
 
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
       }
 
       .logo {
         width: 90px;
         height: 90px;
+      }
+
+      .logo-left {
+        order: 1;
+      }
+
+      .header-text {
+        order: 2;
+      }
+
+      .logo-right {
+        order: 3;
+        margin-top: 10px;
       }
 
       .header-text h1 {
@@ -193,13 +204,13 @@
 <body>
   <div class="container">
     <div class="header-content">
-      <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo">
+      <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo logo-left">
       <div class="header-text">
         <h1>Clases del Curso de CCNAv7 (ITN)</h1>
         <h2>Horario: Sábados / 1:00 p.m. - 5:00 p.m.</h2>
         <h3>Instructor Gustavo Spinetti</h3>
       </div>
-      <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo">
+      <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo logo-right">
     </div>
 
     <table>
